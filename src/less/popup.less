@@ -1,0 +1,46 @@
+@baseUnit: 12px;
+@baseColor: #333;
+
+body {
+  min-width: 350px;
+  font-family: sans-serif;
+  color: @baseColor;
+  font-size: @baseUnit;
+  line-height: @baseUnit * 1.75;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: @baseUnit * 2;
+  margin: 0 0 @baseUnit;
+  
+  // Logo
+  img {
+    vertical-align: middle
+  }
+}
+
+label {
+  display: block;
+}
+
+.note {
+  color: #999;
+  font-size: @baseUnit * 0.8;
+}
+
+#shortenedUrl {
+  width: 100%;
+  padding: @baseUnit;
+  font-size: @baseUnit * 1.75;
+}
+
+#error,
+#success {
+  display: none;
+}
+
+.isSuccess #success,
+.isError #error {
+  display: block;
+}

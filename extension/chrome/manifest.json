@@ -1,0 +1,41 @@
+﻿{
+    "name": "Amazon Link Shortener",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Generate short Amazon links.",
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "clipboardWrite"
+    ],
+    "page_action": {
+        "default_icon": {
+            "19": "img/icon19.png",
+            "38": "img/icon38.png"
+        },
+        "default_title": "Amazon Link Shortener",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.amazon.com/*"
+            ],
+            "js": [
+                "utilities.js",
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
