@@ -53,11 +53,45 @@
         files: ['src/less/**/*.less', 'src/coffee/**/*.coffee', 'test/src/**/*.coffee']
         tasks: ['dev']
     
+    'mozilla-addon-sdk':
+      '1_14':
+        options:
+          revision: '1.14'
+      master:
+        options:
+          revision: 'master'
+          github: true
+
+    'mozilla-cfx-xpi':
+      stable:
+        options:
+          'mozilla-addon-sdk': '1_14'
+          extension_dir: 'extension/firefox'
+          dist_dir: 'build/firefox/stable'
+      experimental:
+        options:
+          'mozilla-addon-sdk': 'master'
+          extension_dir: 'extension/firefox'
+          dist_dir: 'build/firefox/experimental'
+
+    'mozilla-cfx':
+      run_stable:
+        options:
+          'mozilla-addon-sdk': '1_14'
+          extension_dir: 'extension/firefox'
+          command: 'run'
+      run_experimental:
+        options:
+          'mozilla-addon-sdk': 'master'
+          extension_dir: 'extension/firefox'
+          command: 'run'
+  
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-jasmine'
   grunt.loadNpmTasks 'grunt-contrib-less'
+  grunt.loadNpmTasks 'grunt-mozilla-addon-sdk'
   
   grunt.registerTask 'test', ['jasmine:default']
   grunt.registerTask 'dev', ['coffeelint', 'coffee:default', 'less:default', 'test']

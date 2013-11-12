@@ -20,7 +20,8 @@
     "grunt-contrib-watch": "~0.5.1",
     "grunt-contrib-jasmine": "~0.5.1",
     "grunt-contrib-coffee": "~0.7.0",
-    "grunt-contrib-less": "~0.8.1"
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-mozilla-addon-sdk": "~0.3.1"
   },
   "repository": {
     "type": "git",
