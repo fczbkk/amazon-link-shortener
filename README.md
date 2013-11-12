@@ -3,9 +3,10 @@ Amazon Link Shortener
 
 Simple browser extension that shortens Amazon.com product links using amzn.com. It is handy for people who link to Amazon.com often, especially if you use Amazon's affiliate program.
 
-You can install the extension at:
+You can install the extension with these browsers:
 
-* [Chrome Store](https://chrome.google.com/webstore/detail/amazon-link-shortener/mdfnhccnjbioknbbjnocbpdednpcolbh)
+* [Google Chrome](https://chrome.google.com/webstore/detail/amazon-link-shortener/mdfnhccnjbioknbbjnocbpdednpcolbh)
+* [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-link-shortener/)
 
 Useful links
 ------------
