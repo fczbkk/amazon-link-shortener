@@ -1,0 +1,9 @@
+{
+  "id": "amazon-link-shortener@fczbkk.com",
+  "name": "amazon-link-shortener",
+  "fullName": "Amazon Link Shortener",
+  "version": "0.0.1",
+  "description": "Browser extension that shortens protuct links at Amazon using amzn.com.",
+  "author": "Riki Fridrich <riki@fczbkk.com> (http://fczbkk.com/)",
+  "license": "UNLICENSE"
+}

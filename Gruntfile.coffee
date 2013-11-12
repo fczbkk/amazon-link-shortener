@@ -19,6 +19,16 @@
         options:
           bare: true
         files:
+          # Firefox
+          'extension/firefox/lib/main.js' : [
+            'src/coffee/utilities.coffee'
+            'src/coffee/firefox/main.coffee'
+          ]
+          'extension/firefox/data/utilities.js' : ['src/coffee/utilities.coffee']
+          'extension/firefox/data/popup.js' : [
+            'src/coffee/popup.coffee',
+            'src/coffee/firefox/popup.coffee'
+          ]
           # Chrome
           'extension/chrome/background.js' : ['src/coffee/chrome/background.coffee']
           'extension/chrome/content.js' : ['src/coffee/chrome/content.coffee']
@@ -34,6 +44,7 @@
       default:
         files:
           'extension/chrome/popup.css': 'src/less/popup.less'
+          'extension/firefox/data/popup.css': 'src/less/popup.less'
     
     watch:
       default:

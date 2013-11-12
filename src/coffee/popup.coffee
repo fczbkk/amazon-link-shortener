@@ -5,6 +5,7 @@
     field.value = "http://amzn.com/#{asin}"
     field.select()
     field.focus()
-    document.execCommand 'copy'
+    # Copying to clipboard this way works in Chrome.
+    try document.execCommand 'copy'
   else
     document.body.className = 'isError'
