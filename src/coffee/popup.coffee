@@ -1,10 +1,11 @@
-﻿handleAsinUpdate = (asin) ->
+﻿urlField = document.getElementById 'shortenedUrl'
+
+handleAsinUpdate = (asin) ->
   if asin
     document.body.className = 'isSuccess'
-    field = document.getElementById 'shortenedUrl'
-    field.value = "http://amzn.com/#{asin}"
-    field.select()
-    field.focus()
+    urlField.value = getShortUrl asin
+    urlField.select()
+    urlField.focus()
     # Copying to clipboard this way works in Chrome.
     try document.execCommand 'copy'
   else

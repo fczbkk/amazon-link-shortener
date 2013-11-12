@@ -1,13 +1,13 @@
-var handleAsinUpdate;
+var handleAsinUpdate, urlField;
+
+urlField = document.getElementById('shortenedUrl');
 
 handleAsinUpdate = function(asin) {
-  var field;
   if (asin) {
     document.body.className = 'isSuccess';
-    field = document.getElementById('shortenedUrl');
-    field.value = "http://amzn.com/" + asin;
-    field.select();
-    field.focus();
+    urlField.value = getShortUrl(asin);
+    urlField.select();
+    urlField.focus();
     try {
       return document.execCommand('copy');
     } catch (_error) {}
