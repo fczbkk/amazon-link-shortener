@@ -61,5 +61,5 @@
   
   grunt.registerTask 'test', ['jasmine:default']
   grunt.registerTask 'dev', ['coffeelint', 'coffee:default', 'less:default', 'test']
-  grunt.registerTask 'build', ['dev', 'uglify:default']
+  grunt.registerTask 'build', ['dev']
   grunt.registerTask 'default', ['watch:default']
