@@ -6,7 +6,6 @@ clipboard = require 'sdk/clipboard'
 
 popup = panel.Panel
   width: 400,
-  # height: 350,
   contentURL: self.data.url 'popup.html'
   contentScriptFile: [
     self.data.url 'utilities.js'
@@ -14,8 +13,8 @@ popup = panel.Panel
   ]
 
 widget = widget.Widget
-  id: 'mozilla-link'
-  label: 'Mozilla website'
+  id: 'amazon-link-shortener-link'
+  label: 'Shorten URL of this Amazon page'
   contentURL: self.data.url 'icon48.png'
   panel: popup
 

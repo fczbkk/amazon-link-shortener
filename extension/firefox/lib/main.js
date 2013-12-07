@@ -37,8 +37,8 @@ popup = panel.Panel({
 });
 
 widget = widget.Widget({
-  id: 'mozilla-link',
-  label: 'Mozilla website',
+  id: 'amazon-link-shortener-link',
+  label: 'Shorten URL of this Amazon page',
   contentURL: self.data.url('icon48.png'),
   panel: popup
 });
