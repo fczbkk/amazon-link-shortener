@@ -104,7 +104,6 @@
   
   grunt.registerTask 'test', ['jasmine:default']
   grunt.registerTask 'dev', ['coffeelint', 'coffee:default', 'less:default', 'test']
-  grunt.registerTask 'build', ['dev']
   grunt.registerTask 'default', ['watch:default']
 
   grunt.registerTask 'build', (target = 'build') ->
@@ -118,16 +117,22 @@
   
   grunt.registerTask 'updateInfo', 'Update manifest and package files.', ->
     pkg = grunt.config 'pkg'
+    
     # Chrome manifest.json
-    file = grunt.file.readJSON 'extension/chrome/manifest.json'
+    fileName = 'extension/chrome/manifest.json'
+    file = grunt.file.readJSON fileName
     file.name = pkg.title
     file.description = pkg.description
     file.version = pkg.version
+    grunt.file.write fileName, JSON.stringify file, null, '  '
+    
     # Firefox package.json
-    file = grunt.file.readJSON 'extension/firefox/package.json'
+    fileName = 'extension/firefox/package.json'
+    file = grunt.file.readJSON fileName
     file.fullName = pkg.title
     file.description = pkg.description
     file.version = pkg.version
+    grunt.file.write fileName, JSON.stringify file, null, '  '
   
   # TODO: Replace this task with grunt-contrib-bump when it becomes available.
   # https://github.com/gruntjs/grunt-contrib-bump

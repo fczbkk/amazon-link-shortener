@@ -1,6 +1,6 @@
 {
   "name": "amazon-link-shortener",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "title": "Amazon Link Shortener",
   "description": "Browser extension that shortens protuct links at Amazon using amzn.com.",
   "scripts": {
